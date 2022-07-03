@@ -9,7 +9,7 @@
 	<div class="row justify-content-md-center">
 		<div class="col-md-6">
 			<div class="card bg-light my-5">
-				<div class="card-header text-center">Tambah Data</div>
+				<div class="card-header text-center">Edit Data</div>
 				<div class="card-body">
 					<form action="" method="post" class="needs-validation" novalidate>
                         <input type="hidden" name="id" value="<?= $record['id']?>">
