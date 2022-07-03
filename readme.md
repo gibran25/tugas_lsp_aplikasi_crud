@@ -1,4 +1,4 @@
-# Aplikasi Pendataan Buku Tamu
+# Aplikasi Crud Data Buku Sederhana
 
 <li>Aplikasi crud berbasis web yang dibuat menggunakan framework php Codeigniter dan css Bootstrap.</li>
 <li>Aplikasi berfungsi untuk melakukan crud pada data buku.</li>
