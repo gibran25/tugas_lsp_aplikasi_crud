@@ -14,4 +14,18 @@ Database juga telah tersedia di repositori github ini dengan nama "db_tokobuku.s
 
 # Screenshot Tampilan Aplikasi
 Berikut merupakan screenshot tampilan aplikasi saat dijalankan.
-
+<br>
+<br>
+![home](https://user-images.githubusercontent.com/59552046/177028692-e0312a22-1883-468c-be65-496db29685dc.JPG)
+<br>
+![tambah_data](https://user-images.githubusercontent.com/59552046/177028716-46ca48d3-726f-4d77-8629-1fb9b1fa5caa.JPG)
+<br>
+![berhasil_tambah_data](https://user-images.githubusercontent.com/59552046/177028736-0c3d8ff0-5fc3-4d92-9417-f6bc2b62b4a4.JPG)
+<br>
+![edit_data](https://user-images.githubusercontent.com/59552046/177028778-518b519e-1b50-423e-bd9a-7a79bcd60aa6.JPG)
+<br>
+![berhasil_edit data](https://user-images.githubusercontent.com/59552046/177028788-96670160-1e95-4d6f-b2dd-8a546e53351e.JPG)
+<br>
+![hapus_data](https://user-images.githubusercontent.com/59552046/177028796-deaf566f-a791-45ce-aeea-9ee9ab1ff75f.JPG)
+<br>
+![berhasil_hapus_data](https://user-images.githubusercontent.com/59552046/177028816-b8609cdc-c56a-435c-add5-354b7a510e81.JPG)
