@@ -5,6 +5,15 @@
 	</nav>
 </div>
 
+<div class="pricing-header px-3 py-1 pt-md-3 pb-md-4 mx-auto text-center">
+    <?php
+	    $announce = $this->session->flashdata('announce');
+		if(!empty($announce)){
+			echo '<div class="alert alert-danger">'.$announce.'</div>';
+		}
+    ?>
+</div>
+
 <div class="container">
 	<div class="row justify-content-md-center">
 		<div class="col-md-6">

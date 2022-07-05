@@ -3,10 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tokobuku extends CI_Controller {
 
-    // Menginisiasi model "MainModel"
+    // Menginisiasi model, library, dan helper
     public function __construct(){
 		parent:: __construct();
 		$this->load->model('MainModel');
+        $this->load->library('form_validation');
+        $this->load->helper('form');
 	}
 
     // Memanggil fungsi read pada model dan menampilkan halaman home
@@ -23,9 +25,19 @@ class Tokobuku extends CI_Controller {
 		$this->load->view('TambahData');
         $this->load->view('Footer');
 
-        // Memanggil fungsi create pada model jika kondisi bernilai true
+        // Menentukan aturan validasi untuk field tahun terbit dan harga
+        $this->form_validation->set_rules('tahun_terbit', 'Tahun Terbit', 'trim|required|numeric');
+		$this->form_validation->set_rules('harga', 'Harga', 'trim|required|numeric');
+
+        /* Memanggil fungsi create pada model jika kondisi bernilai true
+           jika tidak, maka akan muncul pesan validasi error*/
         if(isset($_POST['tambah'])){
-            $this->MainModel->create();
+            if ($this->form_validation->run() == true) {
+                $this->MainModel->create();
+			} else {
+				$this->session->set_flashdata('announce', validation_errors());
+                redirect('tambah');
+			}
         }
     }
 
@@ -36,9 +48,19 @@ class Tokobuku extends CI_Controller {
 		$this->load->view('EditData', $data);
         $this->load->view('Footer');
 
-        // Memanggil fungsi update pada model jika kondisi bernilai true
+        // Menentukan aturan validasi untuk field tahun terbit dan harga
+        $this->form_validation->set_rules('tahun_terbit', 'Tahun Terbit', 'trim|required|numeric');
+		$this->form_validation->set_rules('harga', 'Harga', 'trim|required|numeric');
+
+        /* Memanggil fungsi update pada model jika kondisi bernilai true
+           jika tidak, maka akan muncul pesan validasi error*/
         if(isset($_POST['edit'])){
-            $this->MainModel->update();
+            if ($this->form_validation->run() == true) {
+                $this->MainModel->update();
+			} else {
+				$this->session->set_flashdata('announce', validation_errors());
+                redirect('edit/'.$id);
+			}
         }
     }
 
